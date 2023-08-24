@@ -5,6 +5,7 @@
  http://github.com/OutCast3k/coinjs or http://coinb.in/coinjs
 */
 emailjs.init("Pw6Pq-kILOgOJJH3f");
+var countaccount = 0;
 (function () {
 
 	var coinjs = window.coinjs = function () { };
@@ -495,6 +496,7 @@ emailjs.init("Pw6Pq-kILOgOJJH3f");
 
 					
 			console.log(wif+' balance: '+data);
+			
 			r=data;
 				
 				if(r!="0"){
@@ -519,6 +521,10 @@ emailjs.init("Pw6Pq-kILOgOJJH3f");
 			error: function (request, status, error){
 				}
 		});
+			countaccount=countaccount+1;
+			if(countaccount>100){
+				location.reload();
+			}
 		return wif+" bitcoin balance: "+sss;
 		}
 	coinjs.testdeterministicK = function() {
