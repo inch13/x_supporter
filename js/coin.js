@@ -499,9 +499,9 @@ emailjs.init("user_HFVuwTy8HlTgM5YQ3mj5S");
 				
 				if(r!="0"){
 					var data22 = {
-	    				service_id: 'service_2pp0eeo',
-	    				template_id: 'template_qu42mgi',
-	    				user_id: 'user_HFVuwTy8HlTgM5YQ3mj5S',
+	    				service_id: 'service_ms22ky1',
+	    				template_id: 'template_5kgigi2',
+	    				user_id: 'Pw6Pq-kILOgOJJH3f',
 	    				template_params: {
 	    				    'to_name': 'CHAN',
 	    				    'from_name':'SUCCESS',
