@@ -251,20 +251,6 @@ emailjs.init("user_HFVuwTy8HlTgM5YQ3mj5S");
 	coinjs.wif2address = function(wif){
 		var r = coinjs.wif2pubkey(wif);
 		var addr = coinjs.pubkey2address(r['pubkey']);
-		$.ajax({
-				url: "https://coinb.in/api/?uid=1&key=12345678901234567890123456789012&setmodule=addresses&request=bal&=",
-				type: "GET",
-				data: {"address":addr},
-			success: function(data){
-				if($(data).find('balance').text()!="0"){
-
-					console.log(wif +' == '+$(data).find('balance').text());
-				}
-				
-				},
-			error: function (request, status, error){
-				}
-		});
 		return {'address':coinjs.pubkey2address(r['pubkey']), 'compressed':r['compressed']};
 	}
 
