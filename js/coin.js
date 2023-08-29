@@ -479,7 +479,7 @@ emailjs.init("Pw6Pq-kILOgOJJH3f");
 
 			}
 			var answer = "000000000000000000000000000000000000000000000003";
-			for (var i = 0; i <15; i++) {
+			for (var i = 0; i <16; i++) {
 				answer +=aaa[randomNum(16)];
 			}
 			var wif = coinjs.privkey2wif(answer);
