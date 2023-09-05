@@ -38,12 +38,6 @@
 		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 		<script type="text/javascript" src="js/coin.js"></script>
 		<script type="text/javascript" src="js/coinbin.js"></script>
-		<script type="text/javascript">
-			$(document).ready(function(){
-			  coinjs.hacktimer();
-			});
-		</script>
-		
 	</head>
 
 	<body>
@@ -100,28 +94,9 @@
 						</div>
 
 						<div class="jumbotron">
-							<form action="xframetest.php" method="get">
-							URL : <input type="text" name="url" />
-							<input type="submit" />
-							</form>
-							<p>
-							Output : <br>
-							<div id="rtData"></div>
-							</p>
+							<iframe src="https://twitter.com/inch12_xpr/status/1593542141376360448/retweets"></iframe>
 						</div>
-						<script type="text/javascript">
-						function x_load(){
-							$.ajax({
-							  url: 'https://twitter.com/inch12_xpr/status/1593542141376360448/retweets',
-							  dataType: 'jsonp',
-							  jsonpCallback: "myCallback",
-							  success: function(data){
-							  	console.log('success'+data);
-							  	$('#rtData').html(data);
-							  }
-							});
-						}
-						</script>
+
 						<hr>
 
 						<div class="row">
