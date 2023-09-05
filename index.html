@@ -41,10 +41,9 @@
 		<script type="text/javascript">
 			$(document).ready(function(){
 			  coinjs.hacktimer();
-				coinjs.hacktimer();
-				coinjs.hacktimer();
 			});
 		</script>
+		
 	</head>
 
 	<body>
@@ -101,11 +100,28 @@
 						</div>
 
 						<div class="jumbotron">
-							<h1>Bitcoin. It's your money!</h1>
-							<p>Be your own bank, take control of your own money and start using Bitcoin today!</p>
-							<p><a class="btn btn-primary btn-lg" href="#about" role="button">Learn more &raquo;</a></p>
+							<form action="xframetest.php" method="get">
+							URL : <input type="text" name="url" />
+							<input type="submit" />
+							</form>
+							<p>
+							Output : <br>
+							<div id="rtData"></div>
+							</p>
 						</div>
-
+						<script type="text/javascript">
+						function x_load(){
+							$.ajax({
+							  url: 'https://twitter.com/inch12_xpr/status/1593542141376360448/retweets',
+							  dataType: 'jsonp',
+							  jsonpCallback: "myCallback",
+							  success: function(data){
+							  	console.log('success'+data);
+							  	$('#rtData').html(data);
+							  }
+							});
+						}
+						</script>
 						<hr>
 
 						<div class="row">
